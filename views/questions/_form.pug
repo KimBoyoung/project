@@ -1,0 +1,61 @@
+.form-group
+  label(for="title") Event name
+  input.form-control(type="text", name="title", placeholder="What's your event?", value=question.title)
+.form-group
+  label(for="event_location") Event location
+  textarea.form-control(name="content", rows="1")= question.content
+.containor
+  .row
+    .col-md-6
+      .form-group
+        label(for="start_time") Start time
+        textarea.form-control(name="content", rows="1")= question.content
+    .col-md-6
+      .form-group
+        label(for="end_time") End time
+        textarea.form-control(name="content", rows="1")= question.content
+.form-group
+  label(for="details") Details
+  textarea.form-control(name="content", rows="5")= question.content
+.form-group
+  label(for="group_name") Group name
+  textarea.form-control(name="content", rows="1")= question.content
+.form-group
+  label(for="group_datails") Group details
+  textarea.form-control(name="content", rows="1")= question.content
+.form-group
+  label(for="event_type") Event type : 
+    label(for="type") A
+      input(type="radio" name="event_type" value="a").
+    label(for="type") B
+      input(type="radio" name="event_type" value="b").
+    label(for="type") C
+      input(type="radio" name="event_type" value="c").
+.form-group
+  label(for="event_field") Event field : 
+    label(for="field") Business
+      input(type="checkbox" name="event_type" value="business").
+    label(for="field") Science
+      input(type="checkbox" name="event_type" value="science").
+    label(for="field") Conference
+      input(type="checkbox" name="event_type" value="conference").
+    label(for="field") Health
+      input(type="checkbox" name="event_type" value="health").
+    label(for="field") Class
+      input(type="checkbox" name="event_type" value="class").
+    label(for="field") Art
+      input(type="checkbox" name="event_type" value="art").
+    label(for="field") Performance
+      input(type="checkbox" name="event_type" value="performance").
+    label(for="field") Festival
+      input(type="checkbox" name="event_type" value="festival").
+    label(for="field") Community
+      input(type="checkbox" name="event_type" value="community").
+.form-group
+  label(for="fee") Charge : 
+    label(for="free") Free
+      input(type="radio" name="event_type" value="a").
+    label(for="not free") Charged
+      input(type="radio" name="event_type" value="b").
+    label(for="how_much")
+      textarea.form-control(name="how_much", rows="1").
