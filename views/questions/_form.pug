@@ -2,26 +2,26 @@
   label(for="title") Event name
   input.form-control(type="text", name="title", placeholder="What's your event?", value=question.title)
 .form-group
-  label(for="event_location") Event location
-  textarea.form-control(name="content", rows="1")= question.content
+  label(for="question") Event location
+  textarea.form-control(name="event_location", rows="1")= question.event_location
 .form-group
-  label(for="start_time") Start time
-  textarea.form-control(name="stime", rows="1")= question.stime
+  label(for="question") Start time
+  textarea.form-control(name="start_time", rows="1")= question.start_time
 .form-group
-  label(for="end_time") End time
-  textarea.form-control(name="etime", rows="1")= question.etime
+  label(for="question") End time
+  textarea.form-control(name="end_time", rows="1")= question.end_time
 .form-group
-  label(for="details") Details
-  textarea.form-control(name="datail", rows="5")= question.detail
+  label(for="question") Details
+  textarea.form-control(name="datails", rows="5")= question.details
 .form-group
-  label(for="group_name") Group name
-  textarea.form-control(name="content", rows="1")= question.content5
+  label(for="question") Group name
+  textarea.form-control(name="group_name", rows="1")= question.group_name
 .form-group
-  label(for="group_datails") Group details
-  textarea.form-control(name="content", rows="5")= question.content6
+  label(for="question") Group details
+  textarea.form-control(name="group_datails", rows="5")= question.group_details
 .form-group
-  label(for="event_type") Event Type : 
-    select.custon-select()= question.content7
+  label(for="question") Event Type : 
+    select.custon-select(name="event_type")= question.event_type
       option.select Types
       option.value Class
       option.value Seminar
@@ -33,7 +33,7 @@
       option.value Tour
 .form-group
   label(for="event_category") Event Category : 
-    select.custon-select()= question.content8
+    select.custon-select(name="event_category")= question.event_category
       option.select Category
       option.value ScienceTech
       option.value Culture
@@ -45,15 +45,15 @@
       option.value Holiday
       option.value Fashion
 .form-group
-  label(for="charge") Charge : 
+  label(for="question") Charge : 
     label(for="free") Free
-      input(type="radio" name="event_type" value="a").
-    label(for="charged") Charged
-      input(type="radio" name="event_type" value="b").
-    label(for="how_much")
+      input(type="radio" name="free" value="a").
+    label(for="question") Charged
+      input(type="radio" name="charged" value="b").
+    label(for="question")
       input.form-control(type="text", name="how_much", placeholder="유료 행사일 경우 입력 ($)", rows="1").
 .form-group
-  label(for="image") Image
+  label(for="question") Image
     input(type="file" name="image").
 .form-group
   label(for="tags") Tags

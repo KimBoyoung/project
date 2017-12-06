@@ -17,7 +17,7 @@ block content
       
     if question.numAnswers > 0
       hr
-      h3 #{question.numAnswers} Answer(s)
+      h3 #{question.numAnswers} Participation(s)
       .answers.show
         each answer in answers
           include _answer
@@ -26,5 +26,5 @@ block content
       .form-group
         label(for='answer') Your Answer
         textarea.form-control(name="content", rows="5")
-      button.btn.btn-primary(type="submit") Post Your Answer
+      button.btn.btn-primary(type="submit") Participate in this Event
 
