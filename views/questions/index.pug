@@ -11,7 +11,7 @@ block content
     h1.main-title 
       | Events
       if questions.total > 0
-        .small Total #{questions.total} question(s)
+        .small Total #{questions.total} event(s)
 
     if questions.total <= 0 
       .alert.alert-info No events available yet
@@ -25,4 +25,4 @@ block content
       +paginate(questions, '/questions', query)
 
     hr
-    a.btn.btn-primary(href='/questions/new') Create Event
+    a.btn.btn-primary(href='/questions/new') Ask Event

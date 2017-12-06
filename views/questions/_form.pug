@@ -4,58 +4,57 @@
 .form-group
   label(for="event_location") Event location
   textarea.form-control(name="content", rows="1")= question.content
-.containor
-  .row
-    .col-md-6
-      .form-group
-        label(for="start_time") Start time
-        textarea.form-control(name="content", rows="1")= question.content
-    .col-md-6
-      .form-group
-        label(for="end_time") End time
-        textarea.form-control(name="content", rows="1")= question.content
+.form-group
+  label(for="start_time") Start time
+  textarea.form-control(name="stime", rows="1")= question.stime
+.form-group
+  label(for="end_time") End time
+  textarea.form-control(name="etime", rows="1")= question.etime
 .form-group
   label(for="details") Details
-  textarea.form-control(name="content", rows="5")= question.content
+  textarea.form-control(name="datail", rows="5")= question.detail
 .form-group
   label(for="group_name") Group name
-  textarea.form-control(name="content", rows="1")= question.content
+  textarea.form-control(name="content", rows="1")= question.content5
 .form-group
   label(for="group_datails") Group details
-  textarea.form-control(name="content", rows="1")= question.content
+  textarea.form-control(name="content", rows="5")= question.content6
 .form-group
-  label(for="event_type") Event type : 
-    label(for="type") A
-      input(type="radio" name="event_type" value="a").
-    label(for="type") B
-      input(type="radio" name="event_type" value="b").
-    label(for="type") C
-      input(type="radio" name="event_type" value="c").
+  label(for="event_type") Event Type : 
+    select.custon-select()= question.content7
+      option.select Types
+      option.value Class
+      option.value Seminar
+      option.value Conference
+      option.value Networking
+      option.value Party
+      option.value Expo
+      option.value Performance
+      option.value Tour
 .form-group
-  label(for="event_field") Event field : 
-    label(for="field") Business
-      input(type="checkbox" name="event_type" value="business").
-    label(for="field") Science
-      input(type="checkbox" name="event_type" value="science").
-    label(for="field") Conference
-      input(type="checkbox" name="event_type" value="conference").
-    label(for="field") Health
-      input(type="checkbox" name="event_type" value="health").
-    label(for="field") Class
-      input(type="checkbox" name="event_type" value="class").
-    label(for="field") Art
-      input(type="checkbox" name="event_type" value="art").
-    label(for="field") Performance
-      input(type="checkbox" name="event_type" value="performance").
-    label(for="field") Festival
-      input(type="checkbox" name="event_type" value="festival").
-    label(for="field") Community
-      input(type="checkbox" name="event_type" value="community").
+  label(for="event_category") Event Category : 
+    select.custon-select()= question.content8
+      option.select Category
+      option.value ScienceTech
+      option.value Culture
+      option.value Health
+      option.value Arts
+      option.value Music
+      option.value Business
+      option.value Food and Drink
+      option.value Holiday
+      option.value Fashion
 .form-group
-  label(for="fee") Charge : 
+  label(for="charge") Charge : 
     label(for="free") Free
       input(type="radio" name="event_type" value="a").
-    label(for="not free") Charged
+    label(for="charged") Charged
       input(type="radio" name="event_type" value="b").
     label(for="how_much")
-      textarea.form-control(name="how_much", rows="1").
+      input.form-control(type="text", name="how_much", placeholder="유료 행사일 경우 입력 ($)", rows="1").
+.form-group
+  label(for="image") Image
+    input(type="file" name="image").
+.form-group
+  label(for="tags") Tags
+  input.form-control(type="text", name="tags", placeholder="tags separated by spaces", value=question.tags ? question.tags.join(" ") : "")
