@@ -63,6 +63,20 @@ router.put('/:id', catchErrors(async (req, res, next) => {
   }
   question.title = req.body.title;
   question.content = req.body.content;
+  question.event_location = req.body.event_location;
+  question.start_date = req.body.start_date;
+  question.start_time = req.body.start_time;
+  question.end_date = req.body.end_date;
+  question.end_time = req.body.end_time;
+  question.content = req.body.content;
+  question.group_name = req.body.group_name;
+  question.group_details = req.body.group_details;
+  question.event_type = req.body.event_type;
+  question.event_category = req.body.event_category;
+  question.free = req.body.free;
+  question.chared = req.body.chared;
+  question.how_much = req.body.how_much;
+  question.image = req.body.image;
   question.tags = req.body.tags.split(" ").map(e => e.trim());
 
   await question.save();

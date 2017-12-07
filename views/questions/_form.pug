@@ -3,58 +3,74 @@
   input.form-control(type="text", name="title", placeholder="What's your event?", value=question.title)
 .form-group
   label(for="question") Event location
-  textarea.form-control(name="event_location", rows="1")= question.event_location
-.form-group
-  label(for="question") Start time
-  textarea.form-control(name="start_time", rows="1")= question.start_time
-.form-group
-  label(for="question") End time
-  textarea.form-control(name="end_time", rows="1")= question.end_time
+  textarea.form-control(type="text", name="event_location", value=question.event_location)
+.containor
+  .row
+    .col-md-6
+      .form-group
+        label(for="question") Start date
+        textarea.form-control(name="start_date", value= question.start_date)
+    .col-md-6
+      .form-group
+        label(for="question") Start time
+        textarea.form-control(name="start_time", value= question.start_time)
+.containor
+  .row
+    .col-md-6
+      .form-group
+        label(for="question") End date
+        textarea.form-control(name="End_date", value= question.end_date)
+    .col-md-6
+      .form-group
+        label(for="question") End time
+        textarea.form-control(name="end_time", value= question.end_time)
 .form-group
   label(for="question") Details
-  textarea.form-control(name="datails", rows="5")= question.details
+  textarea.form-control(name="content", rows="5", value= question.content)
 .form-group
   label(for="question") Group name
-  textarea.form-control(name="group_name", rows="1")= question.group_name
+  textarea.form-control(name="group_name", value= question.group_name)
 .form-group
   label(for="question") Group details
-  textarea.form-control(name="group_datails", rows="5")= question.group_details
+  textarea.form-control(name="group_datails", rows="5", value= question.group_details)
 .form-group
   label(for="question") Event Type : 
-    select.custon-select(name="event_type")= question.event_type
-      option.select Types
-      option.value Class
-      option.value Seminar
-      option.value Conference
-      option.value Networking
-      option.value Party
-      option.value Expo
-      option.value Performance
-      option.value Tour
+    select
+      .custom-select(name="event_type", value= question.event_type)
+        option.select Types
+        option.value Class
+        option.value Seminar
+        option.value Conference
+        option.value Networking
+        option.value Party
+        option.value Expo
+        option.value Performance
+        option.value Tour
 .form-group
   label(for="event_category") Event Category : 
-    select.custon-select(name="event_category")= question.event_category
-      option.select Category
-      option.value ScienceTech
-      option.value Culture
-      option.value Health
-      option.value Arts
-      option.value Music
-      option.value Business
-      option.value Food and Drink
-      option.value Holiday
-      option.value Fashion
+    select
+      .custom-select(name="event_category", value= question.event_category)
+        option.select Category
+        option.value ScienceTech
+        option.value Culture
+        option.value Health
+        option.value Arts
+        option.value Music
+        option.value Business
+        option.value Food and Drink
+        option.value Holiday
+        option.value Fashion
 .form-group
   label(for="question") Charge : 
     label(for="free") Free
-      input(type="radio" name="free" value="a").
+      input(type="radio", name="free", value=question.free)
     label(for="question") Charged
-      input(type="radio" name="charged" value="b").
+      input(type="radio", name="charged", value=question.chared)
     label(for="question")
-      input.form-control(type="text", name="how_much", placeholder="유료 행사일 경우 입력 ($)", rows="1").
+      input.form-control(type="text", name="how_much", placeholder="유료 행사일 경우 입력 ($)", value=question.how_much)
 .form-group
   label(for="question") Image
-    input(type="file" name="image").
+    input(type="file", name="image", value=question.image)
 .form-group
   label(for="tags") Tags
   input.form-control(type="text", name="tags", placeholder="tags separated by spaces", value=question.tags ? question.tags.join(" ") : "")
